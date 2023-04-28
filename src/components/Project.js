@@ -1,12 +1,10 @@
-import styles from "./services.module.css";
-import Nav from "./Nav";
+import styles from "./project.module.css";
+import Nav from "./Nav.js";
 
-export default function Services() {
+export default function Project() {
   return (
     <section className={styles.section}>
-      <h1 className={styles.heroTitle}>
-       services
-      </h1>
+      <h1 className={styles.heroTitle}>works</h1>
 
       <Nav />
 

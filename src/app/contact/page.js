@@ -1,9 +1,10 @@
 import styles from "./contact.module.css";
+import Contact from "@/components/Contact";
 
-export default function Contact() {
+export default function ContactPage() {
     return(
         <main>
-            <h1 className={styles.title}>contact me</h1>
+            <Contact />
         </main>
     )
 }

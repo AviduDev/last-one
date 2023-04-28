@@ -16,6 +16,15 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #d8d9cf;
+  padding: 0.5rem;
+}
+
+section {
+  margin-top: 4rem;
+}
+
 img {
   max-width: 100%;
 }
@@ -25,16 +34,21 @@ Image {
   max-width: 50vh;
 }
 
-h1, h2 h3, h4 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
 h1 {
-  text-align: center;
+  text-align: start;
   font-size: 3rem;
 }
 
 h2 {
   text-align: left;
   font-size: 2rem;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
 }

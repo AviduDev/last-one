@@ -1,12 +1,10 @@
-import styles from "./services.module.css";
 import Nav from "./Nav";
+import styles from "./about.module.css";
 
-export default function Services() {
+export default function About() {
   return (
     <section className={styles.section}>
-      <h1 className={styles.heroTitle}>
-       services
-      </h1>
+      <h1 className={styles.heroTitle}>about</h1>
 
       <Nav />
 

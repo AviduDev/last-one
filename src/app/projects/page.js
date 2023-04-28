@@ -1,6 +1,7 @@
 import styles from "./projects.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
+import Project from "@/components/Project";
 
 import { GraphQLClient } from "graphql-request";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default async function Projects() {
   const projects = await getProjects();
   return (
     <main>
-      <h1 className={styles.title}>projects</h1>
+      <Project />
 
       <ul>
         {projects.map(({ title, slug, mainImage, id }) => (
