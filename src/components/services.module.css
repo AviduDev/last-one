@@ -1,30 +1,35 @@
 .section {
-    margin-top: 0;
-    min-height: 98vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .heroTitle {
-    font-size: 4rem;
-    align-self: flex-start;
-  }
-  
-  .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .description {
-    text-align: end;
-    max-width: 75%;
-    text-align: justify;
-    align-self: flex-end;
-  }
-  
-  .arrow {
-    font-size: 3rem;
-    transform: rotate(90deg);
-  }
+  margin-top: 0;
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  align-self: flex-start;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  text-align: end;
+  max-width: 75%;
+  text-align: justify;
+  align-self: flex-end;
+  text-align: end;
+}
+
+.description li {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.arrow {
+  font-size: 3rem;
+  transform: rotate(90deg);
+}

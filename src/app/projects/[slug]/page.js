@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./project.module.css";
+import Nav from "@/components/Nav";
 
 import { Metadata } from "next";
 
 import { GraphQLClient } from "graphql-request";
+import Link from "next/link";
 
 // Fetching data from hygraph
 
@@ -23,6 +25,20 @@ const getProject = async (params) => {
                 height
               }
               slug
+              description
+              year
+              company
+              design
+              liveSite
+              sourceUrl
+              tags
+              collaboration
+              gallery {
+                id
+                url
+                width
+                height
+              }
             }
           }
         `,
@@ -43,19 +59,95 @@ export async function generateMetadata({ params, searchParams }) {
 
 // ---------------------------------------------------
 
-export default async function Project({ params }) {
+export default async function ProjectPage({ params }) {
   const project = await getProject(params);
   return (
     <main>
-      <h1 className={styles.title}>{project.title}</h1>
+      {/* ---------------top------------------ */}
+      <section className={styles.section}>
+        <h1 className={styles.heroTitle}>{project.title}</h1>
 
-      <Image
-        src={project.mainImage.url}
-        width={project.mainImage.width}
-        height={200}
-        alt={project.title}
-        className={styles.mainImage}
-      />
+        <Nav />
+
+        <div className={styles.bottom}>
+          <p className={styles.arrow}>🡥</p>
+          <p className={styles.description}>{project.description}</p>
+        </div>
+      </section>
+
+      {/* ------------------details and links------------------- */}
+
+      <section className={styles.detailsSection}>
+        <table className={styles.table}>
+          <tbody>
+            <tr>
+              <td className={styles.left}>Company</td>
+              <td className={styles.right}>{project.company}</td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Year</td>
+              <td className={styles.right}>{project.year}</td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Collaboration</td>
+              <td className={styles.right}>{project.collaboration}</td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Company</td>
+              <td className={styles.right}>{project.company}</td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Design</td>
+              <td className={styles.right}>
+                <Link href={project.design} target="_blank">
+                  Behance
+                </Link>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Source</td>
+              <td className={styles.right}>
+                <Link href={project.sourceUrl} target="_blank">
+                  GitHub
+                </Link>
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.left}>Live</td>
+              <td className={styles.right}>
+                <Link href={project.liveSite} target="_blank">
+                  URL
+                </Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      {/* ------------------------images------------------------ */}
+
+      <section className={styles.images}>
+        <ul>
+          {project.gallery.map((image) => {
+            return (
+              <li key={image.id}>
+                <Image
+                  src={image.url}
+                  alt={project.title}
+                  width={image.width}
+                  height={image.height}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </main>
   );
 }

@@ -1,0 +1,15 @@
+.projectTitle {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectItem {
+    margin-top: 2rem;
+}

@@ -24,6 +24,7 @@ const getProjects = async () => {
             }
             title
             id
+            year
           }
         }`
   );
@@ -33,20 +34,20 @@ const getProjects = async () => {
 
 // SEO
 export const metadata = {
-    title: 'Projects',
-    description: 'Latest web design and development projects',
-  };
-
+  title: "Projects",
+  description: "Latest web design and development projects",
+};
 
 export default async function Projects() {
   const projects = await getProjects();
+
   return (
     <main>
       <Project />
 
-      <ul>
-        {projects.map(({ title, slug, mainImage, id }) => (
-          <li key={id}>
+      <ul className={styles.ul}>
+        {projects.map(({ title, slug, mainImage, id, year, liveSite }) => (
+          <li key={id} className={styles.projectItem}>
             <Image
               className={styles.projectImage}
               src={mainImage.url}
@@ -54,9 +55,14 @@ export default async function Projects() {
               height="200"
               alt={title}
             />
-            <Link href={`/projects/${slug}`}>
-              <h2>{title}</h2>
-            </Link>
+            <div className={styles.projectDetails}>
+              <Link href={`/projects/${slug}`} className={styles.link}>
+                <h2 className={styles.projectTitle} scroll={false}>{title}</h2>
+              </Link>
+              <p>2022</p>
+            </div>
+
+          {/* <a href={liveSite} target="_blank">Live</a> */}
           </li>
         ))}
       </ul>

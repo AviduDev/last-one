@@ -15,9 +15,9 @@ export default function Hero() {
       <div className={styles.bottom}>
         <p className={styles.arrow}>🡥</p>
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum,
-          dolores? Odit explicabo vel corrupti id facilis voluptates amet illo
-          non.
+          Avidu is a creative website designer and front-end developer. Who uses
+          modern technologies to create best possible experience to the user
+          and, also cost effectiveness to the client.
         </p>
       </div>
     </section>
