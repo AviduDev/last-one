@@ -7,10 +7,10 @@ export default function Services() {
     <section className={styles.section}>
       <h1 className={styles.heroTitle}>services</h1>
 
-      <Nav />
+      {/* <Nav /> */}
 
       <div className={styles.bottom}>
-        <p className={styles.arrow}>🡥</p>
+        <div className={styles.arrow}>🡥</div>
         <ul className={styles.description}>
           <li>
             <Link href="/">Web Design</Link>

@@ -30,7 +30,9 @@
   }
   
   .arrow {
+    align-self: flex-end;
     font-size: 3rem;
+    transform: rotate(90deg);
   }
 
   .heroTitle {
@@ -49,4 +51,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.300);
     margin: 1rem;
     padding: 0.5rem;
+  }
+
+  .projectImages {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
   }

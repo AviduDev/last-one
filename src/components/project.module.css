@@ -25,5 +25,6 @@
   }
   
   .arrow {
+    align-self: flex-end;
     font-size: 3rem;
   }

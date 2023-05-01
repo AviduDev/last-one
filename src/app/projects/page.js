@@ -34,8 +34,8 @@ const getProjects = async () => {
 
 // SEO
 export const metadata = {
-  title: "Projects",
-  description: "Latest web design and development projects",
+  title: "Web design and development works",
+  description: "Web design and development related works done for personal and commercial projects.",
 };
 
 export default async function Projects() {

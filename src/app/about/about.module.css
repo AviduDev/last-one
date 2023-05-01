@@ -1,0 +1,62 @@
+.data {
+  text-align: end;
+}
+
+.year {
+  text-align: start;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem;
+}
+
+/* .education, .skills, .experience, .technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.education, .skills, .experience, .technologies h2 {
+    text-align: start;
+} */
+
+.table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table tr {
+    width: 100%;
+}
+
+/* ------------------------Responsive Design--------------------- */
+/*---------------START WITH MOBILE FIRST--------------------*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .table tr {
+        width: 90%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .table tr {
+        width: 80%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .table tr {
+        width: 70%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

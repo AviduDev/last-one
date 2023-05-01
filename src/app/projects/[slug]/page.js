@@ -54,7 +54,7 @@ const getProject = async (params) => {
 // SEO
 export async function generateMetadata({ params, searchParams }) {
   const project = await getProject(params);
-  return { title: project.title };
+  return { title: project.title, description: project.description };
 }
 
 // ---------------------------------------------------
@@ -67,10 +67,10 @@ export default async function ProjectPage({ params }) {
       <section className={styles.section}>
         <h1 className={styles.heroTitle}>{project.title}</h1>
 
-        <Nav />
+        {/* <Nav /> */}
 
         <div className={styles.bottom}>
-          <p className={styles.arrow}>🡥</p>
+          <div className={styles.arrow}>🡥</div>
           <p className={styles.description}>{project.description}</p>
         </div>
       </section>
@@ -138,6 +138,7 @@ export default async function ProjectPage({ params }) {
             return (
               <li key={image.id}>
                 <Image
+                  className={styles.projectImages}
                   src={image.url}
                   alt={project.title}
                   width={image.width}

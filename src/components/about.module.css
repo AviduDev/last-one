@@ -1,29 +1,52 @@
 .section {
-    margin-top: 0;
-    min-height: 98vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .heroTitle {
-    font-size: 4rem;
-    align-self: flex-start;
-  }
-  
-  .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
+  margin-top: 0;
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroTitle {
+  align-self: flex-start;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  text-align: end;
+  max-width: 75%;
+  text-align: justify;
+  align-self: flex-end;
+}
+
+.arrow {
+  font-size: 3rem;
+  transform: rotate(90deg);
+}
+
+/* ------------------------Responsive Design--------------------- */
+/*---------------START WITH MOBILE FIRST--------------------*/
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
   .description {
-    text-align: end;
-    max-width: 75%;
-    text-align: justify;
-    align-self: flex-end;
+    max-width: 60%;
   }
-  
-  .arrow {
-    font-size: 3rem;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .description {
+    max-width: 40%;
   }
+}

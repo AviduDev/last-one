@@ -10,10 +10,10 @@ export default function Hero() {
         sampath
       </h1>
 
-      <Nav />
+      {/* <Nav /> */}
 
       <div className={styles.bottom}>
-        <p className={styles.arrow}>🡥</p>
+        <div className={styles.arrow}>🡥</div>
         <p className={styles.description}>
           Avidu is a creative website designer and front-end developer. Who uses
           modern technologies to create best possible experience to the user

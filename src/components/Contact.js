@@ -4,26 +4,40 @@ import Nav from "./Nav";
 
 import Form from "@/components/Form";
 import Faqs from "@/components/Faqs";
+import Link from "next/link";
 
 export default function Contact() {
   return (
-    <main>
-      <section className={styles.section}>
-        <h1 className={styles.heroTitle}>contact</h1>
+    <section className={styles.section}>
+      <h1 className={styles.heroTitle}>contact</h1>
 
-        <Nav />
+      {/* <Nav /> */}
 
-        <div className={styles.bottom}>
-          <p className={styles.arrow}>🡥</p>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum,
-            dolores? Odit explicabo vel corrupti id facilis voluptates amet illo
-            non.
-          </p>
-        </div>
-      </section>
-      <Form />
-      <Faqs />
-    </main>
+      <div className={styles.bottom}>
+        <div className={styles.arrow}>🡥</div>
+        <ul className={styles.description}>
+          <li>
+            <Link href="/" target="_blank" className={styles.contactLink}>
+              LinkedIn 🡥
+            </Link>
+          </li>
+          <li>
+            <Link href="/" target="_blank" className={styles.contactLink}>
+              Behance 🡥
+            </Link>
+          </li>
+          <li>
+            <Link href="/" target="_blank" className={styles.contactLink}>
+              GitHub 🡥
+            </Link>
+          </li>
+          <li>
+            <a href="mailto:avidu97@gmail.com" className={styles.contactLink}>
+              avidu97@gmail.com 🡥
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   );
 }

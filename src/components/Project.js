@@ -6,10 +6,10 @@ export default function Project() {
     <section className={styles.section}>
       <h1 className={styles.heroTitle}>works</h1>
 
-      <Nav />
+      {/* <Nav /> */}
 
       <div className={styles.bottom}>
-        <p className={styles.arrow}>🡥</p>
+        <div className={styles.arrow}>🡥</div>
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum,
           dolores? Odit explicabo vel corrupti id facilis voluptates amet illo
