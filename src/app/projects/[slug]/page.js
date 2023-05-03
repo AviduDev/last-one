@@ -3,6 +3,7 @@ import styles from "./project.module.css";
 import Nav from "@/components/Nav";
 
 import { Metadata } from "next";
+import { cache } from "react";
 
 import { GraphQLClient } from "graphql-request";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const hygraph = new GraphQLClient(
   "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/cl9s32g1q2oun01td822bh5s6/master"
 );
 
-const getProject = async (params) => {
+const getProject = cache(async (params) => {
   const { project } = await hygraph.request(
     `
         query ProjectPageQuery($slug: String!) {
@@ -49,12 +50,19 @@ const getProject = async (params) => {
   );
 
   return project;
-};
+});
 
-// SEO
-export async function generateMetadata({ params, searchParams }) {
+// SEO-----------------------------------------------------
+export async function generateMetadata({ params }) {
   const project = await getProject(params);
-  return { title: project.title, description: project.description };
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+    },
+  };
 }
 
 // ---------------------------------------------------

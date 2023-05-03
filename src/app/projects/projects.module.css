@@ -13,3 +13,11 @@
 .projectItem {
     margin-top: 2rem;
 }
+
+.imageContainer {
+    position: relative;
+}
+
+.projectImage {
+object-fit: cover;
+}
