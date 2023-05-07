@@ -2,13 +2,15 @@ import styles from "./projects.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import Project from "@/components/Project";
+import { cache } from "react";
+
 
 import { GraphQLClient } from "graphql-request";
 import Image from "next/image";
 
 // Fetching projects from hygraph
 
-const getProjects = async () => {
+const getProjects = cache(async () => {
   const hygraph = new GraphQLClient(
     "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/cl9s32g1q2oun01td822bh5s6/master"
   );
@@ -30,7 +32,7 @@ const getProjects = async () => {
   );
 
   return projects;
-};
+});
 
 // SEO
 export const metadata = {

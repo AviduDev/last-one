@@ -6,9 +6,6 @@ export default function Services() {
   return (
     <section className={styles.section}>
       <h1 className={styles.heroTitle}>services</h1>
-
-      {/* <Nav /> */}
-
       <div className={styles.bottom}>
         <div className={styles.arrow}>🡥</div>
         <ul className={styles.description}>
