@@ -1,7 +1,46 @@
+"use client";
+
+import { useRef, useEffect } from "react";
+
 import styles from "./hero.module.css";
 import Nav from "./Nav";
 
 export default function Hero() {
+  useEffect(() => {
+    // --------------------------------------------
+
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+
+    const b = document.querySelector(`.${styles.section}`);
+
+    document.querySelectorAll(`.${styles.heroTitle}`).forEach((h1) => {
+      h1.dataset.value = h1.innerText;
+
+      h1.onmouseover = (event) => {
+        let interactions = 0;
+        const interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < interactions) {
+                return event.target.dataset.value[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (interactions >= event.target.innerText.length) {
+            clearInterval(interval);
+          }
+
+          interactions += 1 / 3;
+        }, 30);
+      };
+    });
+
+    // --------------------------------------------
+  }, []);
+
   return (
     <section className={styles.section}>
       <h1 className={styles.heroTitle}>

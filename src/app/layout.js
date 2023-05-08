@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import Script from "next/script";
+
 import { Analytics } from "@vercel/analytics/react";
 
 import Nav from "@/components/Nav";
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         {children}
+        <Script src="//code.jquery.com/jquery.min.js" />
+        <Script src="dist/descrambler.min.js" />
         <Analytics />
         {/* <Footer /> */}
       </body>

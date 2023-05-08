@@ -37,6 +37,23 @@
   font-size: 3rem;
 }
 
+/* ---------------------------------------------------------------- */
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.serviceTitle {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: end;
+  text-transform: capitalize;
+  padding: 0;
+}
+
 /* ------------------------Responsive Design--------------------- */
 /*---------------START WITH MOBILE FIRST--------------------*/
 

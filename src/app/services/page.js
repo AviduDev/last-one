@@ -49,11 +49,17 @@ export default async function ServicesPage() {
           <div className={styles.arrow}>🡥</div>
           <ul className={styles.description}>
             {/* ----------------------------------------------------- */}
-            {services.map(({ serviceTitle, serviceDescription, id, slug }) => (
-              <li key={id} className={styles.projectItem}>
-                <Link href={`/services/${slug}`}>{serviceTitle}</Link>
-              </li>
-            ))}
+            <ul className={styles.ul}>
+              {services.map(
+                ({ serviceTitle, serviceDescription, id, slug }) => (
+                  <li key={id} className={styles.projectItem}>
+                    <Link href={`/services/${slug}`}>
+                      <h2 className={styles.serviceTitle}>{serviceTitle}</h2>
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
             {/* ----------------------------------------------------- */}
           </ul>
         </div>

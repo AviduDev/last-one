@@ -1,11 +1,16 @@
+
+
 import styles from "./projects.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import Project from "@/components/Project";
 import { cache } from "react";
 
+
 import { GraphQLClient } from "graphql-request";
 import Image from "next/image";
+
+
 
 // Fetching projects from hygraph
 
