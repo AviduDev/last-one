@@ -59,10 +59,16 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .serviceTitle {
+    font-size: 1.2rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .serviceTitle {
+    font-size: 1.2rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -70,11 +76,19 @@
   .description {
     max-width: 60%;
   }
+
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .description {
     max-width: 40%;
+  }
+
+  .serviceTitle {
+    font-size: 1.5rem;
   }
 }

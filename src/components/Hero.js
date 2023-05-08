@@ -16,7 +16,7 @@ export default function Hero() {
     document.querySelectorAll(`.${styles.heroTitle}`).forEach((h1) => {
       h1.dataset.value = h1.innerText;
 
-      h1.onmouseover = (event) => {
+      h1.onclick = (event) => {
         let interactions = 0;
         const interval = setInterval(() => {
           event.target.innerText = event.target.innerText
