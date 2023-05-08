@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import Project from "@/components/Project";
 import { cache } from "react";
 
-
 import { GraphQLClient } from "graphql-request";
 import Image from "next/image";
 
@@ -46,36 +45,35 @@ export default async function Projects() {
 
   return (
     <main>
-      <Project />
+      <section className={styles.section}>
+        {/* ------------------------------------------------ */}
+        <h1 className={styles.heroTitle}>works</h1>
 
-      <ul className={styles.ul}>
-        {projects.map(({ title, slug, mainImage, id, year, liveSite }) => (
-          <li key={id} className={styles.projectItem}>
-            <div className={styles.imageContainer}>
-              <Image
-                className={styles.projectImage}
-                src={mainImage.url}
-                width={mainImage.width}
-                height="800"
-                alt={title}
-              />
-            </div>
-            <div className={styles.projectDetails}>
-              <Link
-                href={`/projects/${slug}`}
-                className={styles.link}
-                scroll={false}
-                shallow={true}
-              >
-                <h2 className={styles.projectTitle}>{title}</h2>
-              </Link>
-              <p>2022</p>
-            </div>
+        {/* --------------------------------------------------- */}
+        <div className={styles.bottom}>
+          <div className={styles.arrow}>🡥</div>
 
-            {/* <a href={liveSite} target="_blank">Live</a> */}
-          </li>
-        ))}
-      </ul>
+          {/* ---------------WORK LIST---------------------- */}
+          <ul className={styles.ul}>
+            {projects.map(({ title, slug, id }) => (
+              <li key={id} className={styles.projectItem}>
+                <Link
+                  href={`/projects/${slug}`}
+                  className={styles.link}
+                  scroll={false}
+                  shallow={true}
+                >
+                  <h2 className={styles.projectTitle}>{title}</h2>
+                </Link>
+
+                {/* <a href={liveSite} target="_blank">Live</a> */}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+      </section>
     </main>
   );
 }
