@@ -9,7 +9,7 @@ export default function About() {
       <div className={styles.bottom}>
         <p className={styles.arrow}>🡥</p>
         <p className={styles.description}>
-          Know more about my educations, previous work experiences, and skills Id
+          Get to know more about my educations, previous work experiences, and skills I had
           developed.
         </p>
       </div>

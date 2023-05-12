@@ -12,7 +12,6 @@
   }
   
   .heroTitle {
-    font-size: 4rem;
     align-self: flex-start;
   }
   
@@ -36,7 +35,7 @@
   }
 
   .heroTitle {
-    font-size: 3rem;
+
   }
 
   .detailsSection table {
@@ -54,7 +53,48 @@
   }
 
   .projectImages {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center;
+    margin-top: 4rem;
   }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ------------------------Responsive Design--------------------- */
+/*---------------START WITH MOBILE FIRST--------------------*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .description {
+    max-width: 60%;
+  }
+  .projectTitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .description {
+    max-width: 40%;
+  }
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+}

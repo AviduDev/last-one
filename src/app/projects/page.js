@@ -40,7 +40,7 @@ const getProjects = cache(async () => {
 
 // SEO
 export const metadata = {
-  title: "Web design and development works",
+  title: "Works | eb design and development works",
   description:
     "Web design and development related works done for personal and commercial projects.",
 };

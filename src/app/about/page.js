@@ -3,7 +3,7 @@ import About from "@/components/About";
 
 // SEO
 export const metadata = {
-  title: "Get to know about avidu and his background",
+  title: "About | Get to know about avidu and his background",
   description:
     "Learn more about his educational, work experience, skills, and technologies he use.",
 };
@@ -18,12 +18,40 @@ export default function AboutPage() {
         <h2>education</h2>
         <table className={styles.table}>
           <tbody>
+
             <tr>
               <td className={styles.year}>2022</td>
               <td className={styles.data}>
                 Trainee Fullstack Web Developer
                 <br />
                 Open Univercity of Moratuwa
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.year}>2019</td>
+              <td className={styles.data}>
+                Diploma in Computer Application
+                <br />
+                Sarvodaya Foundation
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.year}>2018</td>
+              <td className={styles.data}>
+                GCE Advanced Level Examination
+                <br />
+                Kumbukgete Central College
+              </td>
+            </tr>
+
+            <tr>
+              <td className={styles.year}>2014</td>
+              <td className={styles.data}>
+                GCE Ordinary Level Examination
+                <br />
+                Kumbukgete Central College
               </td>
             </tr>
           </tbody>
@@ -76,6 +104,11 @@ export default function AboutPage() {
             <tr>
               <td className={styles.year}>2022</td>
               <td className={styles.data}>SvelteKit</td>
+            </tr>
+
+            <tr>
+              <td className={styles.year}>2023</td>
+              <td className={styles.data}>Astro Js</td>
             </tr>
           </tbody>
         </table>

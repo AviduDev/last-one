@@ -3,7 +3,7 @@ import Contact from "@/components/Contact";
 
 // SEO
 export const metadata = {
-  title: "Contact avidu for get more info",
+  title: "Contact | Contact avidu for get more info",
   description:
     "You can ask anything related to web design and development.",
 };

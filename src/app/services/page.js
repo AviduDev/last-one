@@ -33,7 +33,7 @@ const getServices = cache(async () => {
 
 // ---------------------------------------------
 export const metadata = {
-  title: "Web design and development related services",
+  title: "Services | Web design and development related services",
   description:
     "Avidu provides many services related to web design and development such as branding, logo designing, domain names, web servers and many more.",
 };

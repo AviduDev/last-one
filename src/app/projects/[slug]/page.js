@@ -141,7 +141,7 @@ export default async function ProjectPage({ params }) {
       {/* ------------------------images------------------------ */}
 
       <section className={styles.images}>
-        <ul>
+        <ul className={styles.gallery}>
           {project.gallery.map((image) => {
             return (
               <li key={image.id}>
