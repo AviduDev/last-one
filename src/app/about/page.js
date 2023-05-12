@@ -47,7 +47,7 @@ export default function AboutPage() {
             </tr>
 
             <tr>
-              <td className={styles.year}>2014</td>
+              <td className={styles.year}>2013</td>
               <td className={styles.data}>
                 GCE Ordinary Level Examination
                 <br />
