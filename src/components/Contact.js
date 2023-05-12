@@ -17,17 +17,17 @@ export default function Contact() {
         <div className={styles.arrow}>🡥</div>
         <ul className={styles.description}>
           <li>
-            <Link href="/" target="_blank" className={styles.contactLink}>
+            <Link href="https://www.linkedin.com/in/avidu-web-designer-from-sri-lanka/" target="_blank" className={styles.contactLink}>
               LinkedIn 🡥
             </Link>
           </li>
           <li>
-            <Link href="/" target="_blank" className={styles.contactLink}>
+            <Link href="https://www.behance.net/avidu" target="_blank" className={styles.contactLink}>
               Behance 🡥
             </Link>
           </li>
           <li>
-            <Link href="/" target="_blank" className={styles.contactLink}>
+            <Link href="https://github.com/AviduDev" target="_blank" className={styles.contactLink}>
               GitHub 🡥
             </Link>
           </li>
