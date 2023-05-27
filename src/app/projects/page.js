@@ -56,7 +56,7 @@ export default async function Projects() {
 
         {/* --------------------------------------------------- */}
         <div className={styles.bottom}>
-          <div className={styles.arrow}>🡥</div>
+          <div className={styles.arrow}>🡦</div>
 
           {/* ---------------WORK LIST---------------------- */}
           <ul className={styles.ul}>
